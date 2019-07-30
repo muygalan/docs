@@ -255,6 +255,47 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-python" title="Installing Python" class="md-nav__link">
+    Installing Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-pip" title="Installing pip" class="md-nav__link">
+    Installing pip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-mkdocs" title="Installing Mkdocs" class="md-nav__link">
+    Installing Mkdocs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#commands" title="Commands" class="md-nav__link">
     Commands
   </a>
@@ -352,8 +393,20 @@
 
 
   <li class="md-nav__item">
-    <a href="samsung-ativ8/" title="Samsung Ativ 8" class="md-nav__link">
-      Samsung Ativ 8
+    <a href="terminal/" title="Terminal" class="md-nav__link">
+      Terminal
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="samsung-ativ8/" title="Samsung ATIV 8" class="md-nav__link">
+      Samsung ATIV 8
     </a>
   </li>
 
@@ -377,6 +430,47 @@
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
+    Prerequisites
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installing-python" title="Installing Python" class="md-nav__link">
+    Installing Python
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-pip" title="Installing pip" class="md-nav__link">
+    Installing pip
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installing-mkdocs" title="Installing Mkdocs" class="md-nav__link">
+    Installing Mkdocs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" title="Getting Started" class="md-nav__link">
+    Getting Started
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#commands" title="Commands" class="md-nav__link">
@@ -417,16 +511,55 @@
                 
                 
                 <h1 id="welcome-to-my-documentation-repo">Welcome to My Documentation Repo!</h1>
+<div class="admonition info">
+<p class="admonition-title">Official Mkdocs Websites</p>
 <p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
 <p>For Material Theme documentation visit <a href="https://squidfunk.github.io/mkdocs-material/getting-started/">mkdocs-material</a></p>
-<h2 id="commands">Commands</h2>
+</div>
+<h2 id="prerequisites"><strong>Prerequisites</strong></h2>
+<p>Before you can manually install Mkdocs, you need to have Python and PIP installed on your computer.</p>
+<p><em>The following methods assume you already have WSL installed and activated on your system.</em></p>
+<h3 id="installing-python"><strong>Installing Python</strong></h3>
+<p>You can check if you have <a href="https://realpython.com/installing-python/">Python already installed</a> from the command line:</p>
+<div class="codehilite"><pre><span></span>$ python --version
+Python 2.7.2
+$ pip --version
+pip 1.5.2
+</pre></div>
+
+<h3 id="installing-pip"><strong>Installing pip</strong></h3>
+<p>If you're using a recent version of Python, the Python package manager, pip, is most likely installed by default. However, you may need to upgrade pip to the lasted version:</p>
+<div class="codehilite"><pre><span></span>pip install --upgrade pip
+</pre></div>
+
+<p>If you need to install pip for the first time, download get-pip.py. Then run the following command to install it:</p>
+<div class="codehilite"><pre><span></span>python get-pip.py
+</pre></div>
+
+<h3 id="installing-mkdocs"><strong>Installing Mkdocs</strong></h3>
+<p>Install the mkdocs package using pip:</p>
+<div class="codehilite"><pre><span></span>pip install mkdocs
+</pre></div>
+
+<p>You should now have the mkdocs command installed on your system. Run <code>mkdocs --version</code> to check that everything worked okay.</p>
+<div class="codehilite"><pre><span></span>$ mkdocs --version
+mkdocs, version 0.15.3
+</pre></div>
+
+<h2 id="getting-started"><strong>Getting Started</strong></h2>
+<p>Getting started is super easy.</p>
+<div class="codehilite"><pre><span></span>mkdocs new my-project
+cd my-project
+</pre></div>
+
+<h2 id="commands"><strong>Commands</strong></h2>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
 <li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
 <li><code>mkdocs build</code> - Build the documentation site.</li>
 <li><code>mkdocs help</code> - Print this help message.</li>
 </ul>
-<h2 id="building-locally">Building Locally</h2>
+<h2 id="building-locally"><strong>Building Locally</strong></h2>
 <ul>
 <li>Modify the <code>mkdocs.yml</code> file to add pages. (Located inside the <code>mkdocs/</code>)</li>
 <li>Create new markdown pages (.md) inside the <code>docs/</code> folder.</li>
@@ -438,7 +571,7 @@
 <p>Since you will most likely be uploading mkdocs into your <code>/docs</code> Github repo, note it is <strong>not</strong> necessary to clone your <code>/docs</code> repo locally.</p>
 <p>Instead, ensure you have properly set the remote url within your <code>mkdocs &gt;&gt; /site</code> folder. That way you can simply git push and/or pull your files seamlessly into your <code>/docs</code> remote repo. </p>
 </div>
-<h2 id="project-layout">Project layout</h2>
+<h2 id="project-layout"><strong>Project layout</strong></h2>
 <div class="codehilite"><pre><span></span>mkdocs.yml    # The configuration file.
 docs/
     index.md  # The documentation homepage.

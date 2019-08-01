@@ -303,8 +303,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#how-to-use-mediumish-theme" title="How to use “Mediumish” theme" class="md-nav__link">
+    How to use “Mediumish” theme
   </a>
   
 </li>
@@ -389,8 +389,8 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" title="Prerequisites" class="md-nav__link">
-    Prerequisites
+  <a href="#how-to-use-mediumish-theme" title="How to use “Mediumish” theme" class="md-nav__link">
+    How to use “Mediumish” theme
   </a>
   
 </li>
@@ -415,10 +415,58 @@
                 <h1 id="blog">Blog</h1>
 <div class="admonition info">
 <p class="admonition-title">Official Mediumish Websites</p>
-<p><a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">Mediumish - Jekyll Bootstrap Theme</a>.</p>
-<p>Mediumish Github Repo <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">mediumish-theme-jekyll</a></p>
+<ul>
+<li>
+<p>Author Website – <a href="https://bootstrapstarter.com/bootstrap-templates/template-mediumish-bootstrap-jekyll/">Mediumish - Jekyll Bootstrap Theme</a>.</p>
+</li>
+<li>
+<p>Mediumish Github Repo – <a href="https://github.com/wowthemesnet/mediumish-theme-jekyll">mediumish-theme-jekyll</a></p>
+</li>
+</ul>
 </div>
-<h2 id="prerequisites"><strong>Prerequisites</strong></h2>
+<h2 id="how-to-use-mediumish-theme"><strong>How to use “Mediumish” theme</strong></h2>
+<div class="admonition info">
+<p class="admonition-title">Prerequisites</p>
+<p>Ensure you're running Linux or WSL on Windows 10 with Python, Ruby, and Jekyll installed.</p>
+</div>
+<ol>
+<li>
+<p><a href="https://github.com/wowthemesnet/mediumish-theme-jekyll/archive/master.zip">Download</a> or <code>git clone https://github.com/wowthemesnet/mediumish-theme-jekyll.git</code></p>
+</li>
+<li>
+<p><code>cd mediumish-theme-jekyll</code></p>
+</li>
+<li>
+<p>Run <code>bundle</code> and then <code>jekyll serve --watch</code> </p>
+</li>
+</ol>
+<p>(Note: you may need to run <strong><code>bundle exec jekyll serve --watch</code></strong>)</p>
+<div class="admonition warning">
+<p class="admonition-title">Troubleshooting – Ruby/Jekyll requirement errors when serving</p>
+<p>After running the <code>jekyll serve --watch</code> command, you might encounter the following error:
+<div class="codehilite"><pre><span></span>Traceback (most recent call last):
+    5: from /usr/local/bin/jekyll:23:in `&lt;main&gt;&#39;
+    4: from /usr/local/bin/jekyll:23:in `load&#39;
+    3: from /var/lib/gems/2.5.0/gems/jekyll-3.8.6/exe/jekyll:11:in `&lt;top (required)&gt;&#39;
+    2: from /var/lib/gems/2.5.0/gems/jekyll-3.8.6/lib/jekyll/plugin_manager.rb:48:in `require_from_bundler&#39;
+    1: from /usr/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require&#39;
+/usr/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require&#39;: cannot load such file -- bundler (LoadError)
+</pre></div></p>
+<p>To resolve this issue, run the <code>gem update --system</code></p>
+<p>You might encounter a new issue after running the above command:
+<div class="codehilite"><pre><span></span>Error: could not read file /mnt/c/Users/muyga/Desktop/mediumish-theme-jekyll/vendor/bundle/gems/
+jekyll-3.8.5/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb: Invalid date 
+&#39;&lt;%= Time.now.strftime(&#39;%Y-%m-%d %H:%M:%S %z&#39;) %&gt;&#39;: Document &#39;vendor/bundle/gems/jekyll-3.8.5/
+lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb&#39; does not have a valid date
+ in the YAML front matter. ERROR: YOUR SITE COULD NOT BE BUILT: -------------------------------
+ ----- Invalid date &#39;&lt;%= Time.now.strftime(&#39;%Y-%m-%d %H:%M:%S %z&#39;) %&gt;&#39;: Document &#39;vendor/bundle/
+ gems/jekyll-3.8.5/lib/site_template/_posts/0000-00-00-welcome-to-jekyll.markdown.erb&#39; does not 
+ have a valid date in the YAML front matter.
+</pre></div></p>
+<p>If this happens, modify your <code>config.yml</code> file and add <code>vendor</code> to the <code>exclude:</code> category in
+order to exclude the <code>vendor/</code> folder from your theme folder.</p>
+<p>Now run <code>bundle exec jekyll serve --watch</code> to serve the theme properly.</p>
+</div>
                 
                   
                 
